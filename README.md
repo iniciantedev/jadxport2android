@@ -12,10 +12,10 @@ chmod +x jadxport.sh
 ./jadxport.sh
 ```
 
-##run
+## run
 
 `startjadx`
 
-##stop
+## stop
 
 `stopjadx`
