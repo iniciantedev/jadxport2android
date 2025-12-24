@@ -14,6 +14,7 @@ cat << EOF > $PREFIX/bin/startjadx
 export DISPLAY=:0
 export JAVA_HOME=/data/data/com.termux/files/usr/lib/jvm/java-21-openjdk
 termux-x11 :0 &
+sleep 1
 openbox-session &
 jadx-gui &
 EOF
