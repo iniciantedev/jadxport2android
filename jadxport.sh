@@ -6,7 +6,8 @@ pkg update -y
 pkg upgrade -y
 pkg install x11-repo -y
 echo "installing dependencies for x11"
-pkg install termux-x11-nightly xterm openbox -y
+pkg install termux-x11-nightly xterm openbox python python-pip -y
+pip install pyxdg
 echo "installing jadx and dependencies"
 pkg install jadx jadx-x -y
 cat << EOF > $PREFIX/bin/startjadx
@@ -14,7 +15,7 @@ cat << EOF > $PREFIX/bin/startjadx
 export DISPLAY=:0
 export JAVA_HOME=/data/data/com.termux/files/usr/lib/jvm/java-21-openjdk
 termux-x11 :0 &
-sleep 1
+sleep 2
 openbox-session &
 jadx-gui &
 EOF
